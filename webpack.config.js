@@ -2,6 +2,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
+const dependencies = require("./package.json").dependencies;
+
 module.exports = {
   entry: "./src/index.ts",
   output: {
@@ -35,7 +37,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      shared: [{ "single-spa": { singleton: true } }],
+      shared: Object.keys(dependencies),
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",

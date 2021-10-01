@@ -7,7 +7,9 @@
     "build": "webpack --mode=production"
   },
   "dependencies": {
-    "single-spa": "^5.9.3"
+    "@webcomponents/webcomponentsjs": "2.6.0",
+    "single-spa": "^5.9.3",
+    "zone.js": "0.11.4"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.32.0",

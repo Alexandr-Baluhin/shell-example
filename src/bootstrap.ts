@@ -1,3 +1,8 @@
+// Zone JS is required by Angular
+import "zone.js/dist/zone";
+// Web Component polyfill
+import "@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce-pf.js";
+
 import { registerApplication, start } from "single-spa";
 
 declare global {
