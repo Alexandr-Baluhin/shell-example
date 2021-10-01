@@ -35,10 +35,6 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      remotes: {
-        mfe1: "mfe1@http://localhost:3001/remoteEntry.js",
-        mfe2: "mfe2@http://localhost:3002/remoteEntry.js",
-      },
       shared: [{ "single-spa": { singleton: true } }],
     }),
     new HtmlWebpackPlugin({
